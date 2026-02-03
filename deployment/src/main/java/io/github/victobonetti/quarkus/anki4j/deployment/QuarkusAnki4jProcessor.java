@@ -1,5 +1,7 @@
 package io.github.victobonetti.quarkus.anki4j.deployment;
 
+import io.github.victobonetti.quarkus.anki4j.runtime.Anki4jConfig;
+import io.github.victobonetti.quarkus.anki4j.runtime.Anki4jRecorder;
 import io.quarkus.deployment.annotations.BuildProducer;
 import io.quarkus.deployment.annotations.BuildStep;
 import io.quarkus.deployment.builditem.CombinedIndexBuildItem;
@@ -17,8 +19,13 @@ class QuarkusAnki4jProcessor {
     }
 
     @BuildStep
+    void setupConfig(Anki4jRecorder recorder, Anki4jConfig config) {
+        recorder.initSystemProperties(config);
+    }
+
+    @BuildStep
     void registerPackageForReflection(CombinedIndexBuildItem index,
-            BuildProducer<ReflectiveClassBuildItem> reflection) {
+                                      BuildProducer<ReflectiveClassBuildItem> reflection) {
 
         index.getIndex().getClassesInPackage("com.anki4j.model")
                 .forEach(classInfo -> {
