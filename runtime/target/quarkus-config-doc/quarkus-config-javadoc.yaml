@@ -1,0 +1,15 @@
+---
+extension:
+  groupId: "io.github.victobonetti"
+  artifactId: "quarkus-anki4j"
+  name: "Quarkus Anki4j"
+  nameSource: "EXTENSION_METADATA"
+  detected: true
+elements:
+  io.github.victobonetti.quarkus.anki4j.runtime.Anki4jConfig.maxPkgSizeKb:
+    description: "Define o tamanho máximo permitido para o pacote (em KB).\n<p>\n\
+      Este valor é repassado para a variável de sistema {@code ANKI4J_MAX_PKG_SIZE_KB}\n\
+      utilizada pela biblioteca interna. Se não for definido no {@code application.properties},\n\
+      o valor padrão de 10MB (10240 KB) será aplicado.\n* @return O tamanho máximo\
+      \ do pacote em Kilobytes."
+    format: "JAVADOC"

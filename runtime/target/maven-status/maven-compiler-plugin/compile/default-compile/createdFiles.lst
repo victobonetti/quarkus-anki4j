@@ -1,0 +1,5 @@
+META-INF/quarkus-config-doc/quarkus-config-model-version
+META-INF/quarkus-config-doc/quarkus-config-javadoc.json
+io/github/victobonetti/quarkus/anki4j/runtime/Anki4jRecorder.class
+META-INF/quarkus-javadoc.properties
+io/github/victobonetti/quarkus/anki4j/runtime/Anki4jConfig.class
