@@ -7,6 +7,15 @@
     <packaging>pom</packaging>
     <name>Quarkus Anki4j - Parent</name>
 
+    
+      <distributionManagement>
+       <repository>
+         <id>github</id>
+         <name>GitHub Packages</name>
+         <url>https://maven.pkg.github.com/victobonetti/quarkus-anki4j</url>
+       </repository>
+      </distributionManagement>
+
     <modules>
         <module>deployment</module>
         <module>runtime</module>
